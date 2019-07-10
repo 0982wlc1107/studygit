@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        #c3{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="c3" width="800px" height="800px"></canvas>
+    <script>
+        var c3=document.getElementById("c3");
+        var ctx=c3.getContext("2d");
+        var y=50;
+        var z=0;x=0;c=50;a=300;b=400;m=500;d=600;e=700;
+        var t=setInterval(function(){
+            ctx.clearRect(0,0,800,800);
+            z+=y;
+            x+=y;
+            c+=y;
+            
+            
+            //外围轮廓
+    ctx.beginPath();
+    ctx.arc(z,400,200,30*Math.PI/180,330*Math.PI/180);
+    ctx.fillStyle="rgb(195,156,000)";
+    ctx.lineWidth=15;
+    ctx.lineTo(x,400);
+    ctx.closePath();
+    ctx.fill();
+
+    //黑眼睛
+    ctx.beginPath();
+    ctx.arc(c,280,50,0,360*Math.PI/180);
+    ctx.fillStyle="black";
+    ctx.fill();
+
+    //豆
+    ctx.beginPath();
+    ctx.arc(m,400,30,0,360*Math.PI/180);
+    ctx.fillStyle="rgb(195,156,000)";
+    ctx.fill();
+    ctx.beginPath();
+    ctx.arc(d,400,30,0,360*Math.PI/180);
+    ctx.fillStyle="rgb(195,156,000)";
+    ctx.fill();
+    ctx.beginPath();
+    ctx.arc(e,400,30,0,360*Math.PI/180);
+    ctx.fillStyle="rgb(195,156,000)";
+    ctx.fill();
+    ctx.beginPath();
+    ctx.arc(a,400,30,0,360*Math.PI/180);
+    ctx.fillStyle="rgb(195,156,000)";
+    ctx.fill();
+    ctx.beginPath();
+    ctx.arc(b,400,30,0,360*Math.PI/180);
+    ctx.fillStyle="rgb(195,156,000)";
+    ctx.fill();
+        if(z>300){
+            a+=y;
+        }
+        if(z>400){
+            b+=y;     
+        }
+        if(z>500){
+            m+=y;
+        }
+        if(z>600){
+            d+=y;
+        }
+        if(z>700){
+            e+=y;
+            }
+    if(z>=800){
+        z=0;x=0;c=50;a=300;b=400;m=500;d=600;e=700;
+
+    }
+    },200)
+    
+    
+    </script>
+</body>
+</html>
