@@ -57,7 +57,7 @@
 
 	（2）添加远程仓库  并同步 本地仓库
 
-		$ git remote add origin git@github.com: ||  你的github 帐户名  || /learngit.git          //关联本地仓库与远程仓库
+		git remote add origin git@github.com: ||  你的github 帐户名  || /learngit.git          //关联本地仓库与远程仓库
 
 		git push -u origin master             //将本地仓库内容推送到远程库上
 
